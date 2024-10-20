@@ -1,3 +1,6 @@
+import { NavLink } from "react-router-dom";
+import milogo from "../../../assets/img/logoReact.png"
+
 export const Cabecera = () => {
   return (
     <>
@@ -6,9 +9,9 @@ export const Cabecera = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <NavLink className="navbar-brand" to="/">
+            <img src={milogo} alt="El logo" />
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,14 +26,14 @@ export const Cabecera = () => {
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink className="nav-link active" aria-current="page" to="/">
                   Inico
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="*">
                   Editoriales
-                </a>
+                </NavLink>
               </li>
               
 
@@ -46,30 +49,30 @@ export const Cabecera = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink className="dropdown-item" to="/Libcre">
                       Registrar Libros
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Listar Librosos
-                    </a>
+                    <NavLink className="dropdown-item" to="/Liblis">
+                      Listar Libros
+                    </NavLink>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink className="dropdown-item" to="/Libadm">
                       Administrar Libros
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/acer">
                   Acerca de
-                </a>
+                </NavLink>
               </li>
             </ul>
             <form className="d-flex" role="search">

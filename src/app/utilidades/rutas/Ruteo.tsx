@@ -21,7 +21,7 @@ export const Ruteo = () => {
 
       <Route path="/acer" element={<Acerca />} />
 
-      <Route path="" element={<No_encontrado />} />
+      <Route path="*" element={<No_encontrado />} />
     </Routes>
   );
 };

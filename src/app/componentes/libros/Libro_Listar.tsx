@@ -1,4 +1,18 @@
+import { useState } from "react";
+
+import { Libro } from "../../modelos/Libro";
+import { ARREGLO_LIBRO } from "../../mocks/Libro-mocks";
+import { ARREGLO_LIBROGenero } from "../../utilidades/dominios/DomGenero";
+
 export const Libro_Listar = () => {
+  const [arrLibro] = useState<Libro[]>(ARREGLO_LIBRO);
+
+  const obtenerNombre = (valor: string)=>{
+    for(const objGen of ARREGLO_LIBROGenero)
+      if (objGen.codGenero == valor)
+        return objGen.nombreGenero;
+  }
+
   return (
     <>
       <div className="pt-4 d-flex justify-content-center">
@@ -9,32 +23,27 @@ export const Libro_Listar = () => {
                 <th style={{width: "10"}}>No.</th>
                 <th style={{width: "50"}}>Título de libro</th>
                 <th style={{width: "30"}}>Autor</th>
-                <th style={{width: "10"}} className="text-center">ISBN</th>
-                <th style={{width: "15"}}>Editorial</th>
+                <th style={{width: "10"}} className="text-center">Género</th>
+                <th style={{width: "15"}}>Imagen</th>
               </tr>
             </thead>
             <tbody>
+
+              {arrLibro.map((miLib: Libro)=>(
               <tr>
-                <td scope="row">1</td>
-                <td>Cien años de soledad</td>
-                <td>Gabriel Garcia Marquez</td>
-                <td className="text-center">7788888888</td>
-                <td>Sudamericana</td>
+              <td>{miLib.codLibro}</td>
+              <td>{miLib.tituloLibro}</td>
+              <td>{miLib.autorLibro}</td>
+              <td className="text-center">{obtenerNombre(miLib.codGeneroLibro)}</td>
+              <td>
+                <tr key={miLib.codLibro} className="align-middle"/>
+                <img src={miLib.imagenLibroBase64} alt="La imagen" className="imagenListado"/>
+                <br />
+                {miLib.imagenLibro}</td>
               </tr>
-              <tr>
-                <td scope="row">2</td>
-                <td>La casa de los espiritus</td>
-                <td>Isabella Allende</td>
-                <td className="text-center">7888888888</td>
-                <td>Rama</td>
-              </tr>
-              <tr>
-                <td scope="row">3</td>
-                <td>El tunel</td>
-                <td>Ernesto Sabato</td>
-                <td className="text-center">9892323238</td>
-                <td>Planeta</td>
-              </tr>
+              ))}
+
+
             </tbody>
           </table>
         </div>

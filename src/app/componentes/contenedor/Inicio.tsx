@@ -101,13 +101,13 @@ export const Inicio = () => {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                         >
-                          Ver
+                         Ver
                         </button>
                         <button
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                         >
-                          Editar
+                         Editar
                         </button>
                       </div>
                       <small className="text-body-secondary">9 mins</small>
@@ -145,13 +145,13 @@ export const Inicio = () => {
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                         >
-                          Ver
+                         Ver
                         </button>
                         <button
                           type="button"
                           className="btn btn-sm btn-outline-secondary"
                         >
-                          Editar
+                         Editar
                         </button>
                       </div>
                       <small className="text-body-secondary">9 mins</small>

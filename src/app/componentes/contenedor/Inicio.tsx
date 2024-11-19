@@ -1,4 +1,8 @@
 import { NavLink } from "react-router-dom";
+import estaimg from "../../../assets/img/este.jpg"
+import siuu from "../../../assets/img/siuu.jpg"
+import otra from "../../../assets/img/otra.jpg"
+
 export const Inicio = () => {
   return (
     <>
@@ -15,10 +19,10 @@ export const Inicio = () => {
                 Cada libro cuenta una historia única, esperando ser descubierta.
               </p>
               <p>
-                <NavLink to="*" className="btn btn-primary my-2">
+                <NavLink to="/acer" className="btn btn-primary my-2">
                  Explorar Libros
                 </NavLink>
-                <NavLink to="/libcre" className="btn btn-secondary my-2">
+                <NavLink to="/Libcre" className="btn btn-secondary my-2">
                  Agregar Nuevo Libro
                 </NavLink>
               </p>
@@ -31,41 +35,26 @@ export const Inicio = () => {
             <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
               <div className="col">
                 <div className="card shadow-sm">
-                  <svg
-                    className="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                    <title>Portada</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                      Portada del libro
-                    </text>
-                  </svg>
+                <img src={estaimg} alt="Portada del libro" className="card-img-top" style={{ width: '100%', height: 'auto' }} />
                   <div className="card-body">
                     <p className="card-text">
-                     Explora este libro que ofrece una historia apasionante. 
-                     Descubre detalles únicos y déjate cautivar por cada página.
+                    Una familia se muda a un hotel aislado. Descubre detalles únicos y
+                    déjate cautivar por cada página llena de terror y suspense sobrenatural.
                     </p>
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="btn-group">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                          Ver
-                        </button>
-                        <button
-                          type="button"
+                      <NavLink
+                        to="/acer" 
+                        className="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </NavLink>
+                        <NavLink
+                          to="/Libact/123" 
                           className="btn btn-sm btn-outline-secondary"
                         >
                           Editar
-                        </button>
+                        </NavLink>
                       </div>
                       <small className="text-body-secondary">9 mins</small>
                     </div>
@@ -74,41 +63,27 @@ export const Inicio = () => {
               </div>
               <div className="col">
                 <div className="card shadow-sm">
-                  <svg
-                    className="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                    <title>Portada</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                     Portada del libro
-                    </text>
-                  </svg>
+                <img src={siuu} alt="Portada del libro" className="card-img-top" style={{ width: '100%', height: 'auto' }} />
                   <div className="card-body">
                     <p className="card-text">
-                     Sumérgete en otra obra fascinante que promete llevarte a 
-                     un mundo nuevo, lleno de intriga y emoción.
+                    Sumérgete en esta obra que narra la lucha interna de un joven tras cometer un crimen. 
+                    Cada página te atrapará con su profunda exploración de la culpa y la redención.
+
                     </p>
                     <div className="d-flex justify-content-between align-items-center">
                       <div className="btn-group">
-                        <button
-                          type="button"
+                      <NavLink
+                        to="/acer" 
+                        className="btn btn-sm btn-outline-secondary"
+                      >
+                        Ver
+                      </NavLink>
+                        <NavLink
+                          to="/Libact/123" 
                           className="btn btn-sm btn-outline-secondary"
                         >
-                         Ver
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                         Editar
-                        </button>
+                          Editar
+                        </NavLink>
                       </div>
                       <small className="text-body-secondary">9 mins</small>
                     </div>
@@ -117,43 +92,27 @@ export const Inicio = () => {
               </div>
               <div className="col">
                 <div className="card shadow-sm">
-                  <svg
-                    className="bd-placeholder-img card-img-top"
-                    width="100%"
-                    height="225"
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-label="Placeholder: Thumbnail"
-                    preserveAspectRatio="xMidYMid slice"
-                    focusable="false"
-                  >
-                    <title>Portada</title>
-                    <rect width="100%" height="100%" fill="#55595c"></rect>
-                    <text x="50%" y="50%" fill="#eceeef" dy=".3em">
-                     Portada del libro
-                    </text>
-                  </svg>
+                <img src={otra} alt="Portada del libro" className="card-img-top" style={{ width: '100%', height: 'auto' }} />
                   <div className="card-body">
                     <p className="card-text">
-                     Un libro ideal para aquellos que buscan aventuras
-                     y experiencias únicas en cada capítulo.
-                  
+                    Adéntrate en una noche mágica en Tokio, llena de personajes fascinantes y situaciones surrealistas. 
+                    Déjate llevar por cada página y descubre los misterios de la vida nocturna.
                     </p>
                     <div className="d-flex justify-content-between align-items-center">
-                      <div className="btn-group">
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                         Ver
-                        </button>
-                        <button
-                          type="button"
-                          className="btn btn-sm btn-outline-secondary"
-                        >
-                         Editar
-                        </button>
-                      </div>
+                    <div className="btn-group">
+                    <NavLink
+                      to="/acer" 
+                      className="btn btn-sm btn-outline-secondary"
+                    >
+                      Ver
+                    </NavLink>
+                      <NavLink
+                        to="/Libact/123" 
+                        className="btn btn-sm btn-outline-secondary"
+                      >
+                        Editar
+                      </NavLink>
+                    </div>
                       <small className="text-body-secondary">9 mins</small>
                     </div>
                   </div>

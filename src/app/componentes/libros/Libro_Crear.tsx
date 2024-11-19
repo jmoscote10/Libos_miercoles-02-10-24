@@ -1,10 +1,10 @@
+import { ARREGLO_LIBROGenero } from "../../utilidades/dominios/DomGenero";
 export const Libro_Crear = () => {
-  return (
+  return ( 
     <>
       <div className="pt-5 d-flex justify-content-center">
         <div className="col-md-8">
           <form className="row g-3 needs-validation">
-
             <div className="col-md-6">
               <label htmlFor="nomb" className="form-label">
                 Título del libro
@@ -46,16 +46,17 @@ export const Libro_Crear = () => {
 
             <div className="col-md-6">
               <label htmlFor="edit" className="form-label">
-              Editorial
+                Género
               </label>
               <select className="form-select" id="edit" name="edit" required>
                 <option selected disabled value="">
-                Selecione la Editorial
+                  Seleccione el Género
                 </option>
-                <option>Grupo Planeta</option>
-                <option>Grupo Santillana</option>
-                <option>Rama</option>
-                <option>Sudamerica</option>
+                {ARREGLO_LIBROGenero.map((genero) => (
+                  <option>
+                   Opción {genero.codGenero}: {genero.nombreGenero}
+                  </option>
+                ))}
               </select>
             </div>
 
